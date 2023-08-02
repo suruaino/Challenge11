@@ -1,0 +1,174 @@
+/*We are customising our page a little bit here*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+* p{
+      /*This is the color for all the paragraph content of the page*/
+    color: var(--Grayish-Blue);
+}
+main :is(h1, h2, h3, h4, small){
+    /*This is the color for all the headings of the page*/
+    color: var(--Dark-Blue);
+}
+:root{
+
+/* ### Primary */
+--Dark-Blue: hsl(233, 26%, 24%);
+--Lime-Green: hsl(136, 65%, 51%);
+--Bright-Cyan: hsl(192, 70%, 51%);
+--Lime-Green-hover: hsl(136, 57%, 67%);
+--Bright-Cyan-hover: hsl(192, 57%, 67%);
+
+/**### Below are all the used background gradients*/
+--Dark-Blue-transparent: rgba(45, 49, 77, .95);
+--Grayish-Blue-transparent: rgba(150, 152, 166, .7);
+--Light-Grayish-Blue-transparent: rgba(243, 244, 246, .5);
+--btn-gradient: linear-gradient(
+    90deg, 
+    var(--Lime-Green), 
+    var(--Bright-Cyan)
+    );
+--btn-gradient-hover: linear-gradient(
+    90deg, 
+    var(--Lime-Green-hover), 
+    var(--Bright-Cyan-hover)
+);
+--mobile-navbg-gradient: linear-gradient(
+    180deg, 
+    var(--Dark-Blue-transparent), 
+    var(--Grayish-Blue-transparent), 
+    var(--Light-Grayish-Blue-transparent)
+    );
+
+/* ### Neutral */
+--Grayish-Blue: hsl(233, 8%, 62%);
+--Light-Grayish-Blue: hsl(220, 16%, 96%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    font-size: 18px;
+    font-family: "Public Sans";
+    
+}
+header{
+    max-width: 400px;
+}
+/*===== Check out for nav menu and toggle below and within =====*/
+header nav{
+    background: var(--mobile-navbg-gradient);
+    top: 4rem;
+    height: 40rem;
+    padding: 1.5rem 1.5rem;
+}
+header input:checked ~ nav,
+header input:checked ~ #close-bar{
+    display: block;
+}
+header input:checked ~ #menu-bar{
+    display: none;
+}
+/*===== Check out for nav menu and toggle above and within =====*/
+
+main{
+    max-width: 400px;
+}
+main #hero{
+    background: url(images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -60px;
+    background-size: contain;
+}
+main #hero .left p{
+    line-height: 1.5rem;
+}
+main #hero .left button{
+    height: 2.8rem;
+    background: var(--btn-gradient);
+}
+main #hero .left button:hover{
+    background: var(--btn-gradient-hover);
+}
+main #hero .right img{
+    top: -3.6rem;
+    max-width: 21rem;
+}
+
+main .section2{
+    background-color: var(--Light-Grayish-Blue);
+    line-height: 1.5rem
+}
+main .section3{
+    background-color: var(--White);
+    
+}
+main .section3 article h3{
+    font-size: 1.1rem;
+}
+main .section3 article p{
+    font-size: .8rem;
+}
+footer{
+    background: var(--Dark-Blue);
+}
+footer .right button{
+    height: 2.8rem;
+    background: var(--btn-gradient);
+}
+footer .right button:hover{
+    background: var(--btn-gradient-hover);
+}
+* footer a:hover{
+    color: var(--Lime-Green);
+}
+* footer a:hover img{
+    background-color: var(--Bright-Cyan);
+}
+@media only screen and (min-width: 768px){
+    header{
+        max-width: 100%;
+    }
+    header nav{
+        background: transparent;
+    }
+    header nav ul li{
+        height: 100%;
+        border-bottom: 2px solid transparent;
+    }
+    header nav ul li:hover{
+        border-bottom: 2px solid var(--Bright-Cyan);
+    }
+    header button{
+        background: var(--btn-gradient);
+    }
+    header button:hover{
+        background: var(--btn-gradient-hover);
+    }
+    main{
+        max-width: 100%;
+    }
+    main #hero{
+        background: url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 680px -210px ;
+        background-size: 75rem;
+        height: 46rem;
+    }
+    main #hero .right img{
+        right: -11%;
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 996px){
+    header nav{
+        background: transparent;
+        height: 0rem;
+        padding: 0;
+        display: flex;
+    }
+}
