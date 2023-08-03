@@ -53,6 +53,7 @@ main :is(h1, h2, h3, h4, small){
 body{
     font-size: 18px;
     font-family: "Public Sans";
+    overflow-x: hidden;
     
 }
 header{
@@ -82,6 +83,7 @@ main #hero{
     background-repeat: no-repeat;
     background-position: 0 -60px;
     background-size: contain;
+    overflow: hidden;
 }
 main #hero .left p{
     line-height: 1.5rem;
@@ -152,16 +154,23 @@ footer .right button:hover{
         max-width: 100%;
     }
     main #hero{
-        background: url(images/bg-intro-desktop.svg);
+        background: none;
         background-repeat: no-repeat;
-        background-position: 680px -210px ;
-        background-size: 75rem;
+        background-position: 40vw -190px;
+        background-attachment: fixed;
+        background-size: 85rem;
         height: 46rem;
     }
-    main #hero .right img{
-        right: -11%;
-        max-width: 60%;
+    main #hero .left p{
+        max-width: 30.6rem;
     }
+    main #hero .right{
+    }
+    main #hero .right img{
+        translate: 18% 0;
+        max-width: 52rem;
+    }
+   
 }
 
 @media only screen and (min-width: 996px){
@@ -169,6 +178,20 @@ footer .right button:hover{
         background: transparent;
         height: 0rem;
         padding: 0;
+        display: flex;
+    }
+   
+}
+@media only screen and (min-width: 1395px){
+    main #hero{
+        background: url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 40vw -190px;
+        background-attachment: fixed;
+        background-size: 85rem;
+        height: 46rem;
+    }
+    main #hero .right img{
         display: flex;
     }
 }
