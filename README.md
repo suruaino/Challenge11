@@ -5,7 +5,6 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -18,11 +17,6 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 
 ## Overview
  
-### Screenshot
-
-![Mobile](./mobile.png)
-![Desktop](./desktop.png)
-
 ### Links
 
 - Solution URL: (https://github.com/suruaino/Challenge11.git)
